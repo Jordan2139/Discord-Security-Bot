@@ -1,5 +1,21 @@
 # Discord-Security-Bot
 
+An advanced Discord Security bot, including a ban database, watchlist, sticky messages, server lockdown, and embed builder. Supports multiple servers.
+
+# Dependencies
+
+```
+- NodeJS V14+
+- MySQL-Server
+- Discord Developer Mode
+- Discord Application
+- Discord Server
+```
+
+---
+
+# Previews
+
 ![](https://cdn.hyperz.dev/ocagtbnm.png)
 
 ![](https://cdn.hyperz.dev/ny185scy.png)
