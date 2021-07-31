@@ -2,7 +2,7 @@ const _config = {
 
     // Client Settings
     prefix: "s!",
-    token: "YOUR_BOT_TOKEN",
+    token: "your-token",
     date_format: "MM-DD-YYYY HH:mm A",
     copyright: "© 2021 Your Name",
     colorhex: "#eb3734",
@@ -15,7 +15,12 @@ const _config = {
         host: "localhost",
         user: "root",
         password: "",
-        database: "bandb"
+        database: "security"
+    },
+
+    clientAPI: {
+        enabled: false, // Enabled the API
+        port: "3000" // The port to run the API on (cannot be the same as port on line 10)
     },
 
     reports: {

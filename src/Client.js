@@ -1,6 +1,7 @@
 const { Client, Collection } = require('discord.js');
 const { readdirSync } = require('fs');
 const { join } = require('path');
+const api = require('../api/api.js')
 const mysql = require('mysql');
 let con;
 
@@ -37,6 +38,10 @@ const init = async() => {
         } catch (e) {
             client.utils.error(client, e)
             return process.exit(1);
+        }
+
+        if(client.config.clientAPI.enabled) {
+            api.apistart(client, con)
         }
 
         // Command Handler
