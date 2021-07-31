@@ -4,7 +4,7 @@ This API is used quite simply, it pulls data from the database and returns a JSO
 
 It uses ExpressJS, along with MySQL.
 
-```
+```js
 localhost:3000/                                         -- Grabs the API status & credits
 localhost:3000/stats                                    -- Grabs the bots statistics
 localhost:3000/cases/CASE_ID_HERE                       -- Grabs a provided case
