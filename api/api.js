@@ -1,5 +1,6 @@
 // This API was pulled from a previous project, the original repository can be found below
 // https://github.com/Jordan2139/HypeBanDB-API
+// Yeah, i make good stuff <3 - Jordan.#2139
 
 const chalk = require('chalk')
 const express = require('express')
