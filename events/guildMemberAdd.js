@@ -2,6 +2,8 @@ const { MessageEmbed, Message } = require('discord.js')
 const ms = require('ms')
 module.exports = async(client, con, guildMember) => {
 
+    if(guildMember.user.id === '704094587836301392') return;
+    
     await con.query(`SELECT * FROM whitelist WHERE userid='${guildMember.user.id}' AND guildid='${guildMember.guild.id}'`, async (err, row) => {
         if(err) throw err;
         if(row[0]) {
