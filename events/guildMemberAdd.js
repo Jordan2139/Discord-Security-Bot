@@ -127,7 +127,8 @@ module.exports = async(client, con, guildMember) => {
             }
         }
     });
-
+    
+    if(guildMember.user.bot) return;
     await con.query(`SELECT * FROM guilds WHERE guildid='${guildMember.guild.id}' AND altprev='true'`, async (err, row) => {
         if(err) throw err;
         if(row[0]) {
