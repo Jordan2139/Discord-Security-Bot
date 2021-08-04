@@ -30,7 +30,7 @@ module.exports = async(client, con, ready) => {
             let booter = carden(chalk.blue(head), frick, { margin: 1, content: { borderStyle: 'single', borderColor: "blue", padding: 1}, header: { borderStyle: 'classic', padding: 1}})
             console.log(booter);
             console.log(`\n\n    ------ CONSOLE LOGGING BEGINS BELOW ------\n\n`)
-
+            console.log("Bot started successfully"); // Allows for docker ready event
         })
 
         await client.guilds.cache.forEach(async g => {
