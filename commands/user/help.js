@@ -68,7 +68,7 @@ async function helpEmbed(client, message, MessageEmbed) {
     let embed = new MessageEmbed()
     .setColor(client.config.colorhex)
     .setTitle(`${client.user.username} Help Menu`)
-    .setDescription(`**What is ${client.user.username}?**\n${client.user.username} is a Discord bot that utilizes the DiscordJS API to focus on keeping your server safe from users, trolls, attacks, and more!\n\n**Command Categories:**\n\`user\`  \`admin\`  \`manager\` \`utility\`\n\`\`\`s!help category\`\`\`\n**Credits:**\n[@Hyperz](https://hyperz.dev/discord) - *Head Programmer*`)
+    .setDescription(`**What is ${client.user.username}?**\n${client.user.username} is a Discord bot that utilizes the DiscordJS API to focus on keeping your server safe from users, trolls, attacks, and more!\n\n**Command Categories:**\n\`user\`  \`admin\`  \`manager\` \`utility\`\n\`\`\`${client.config.prefix}help category\`\`\`\n**Credits:**\n[@Hyperz](https://hyperz.dev/discord) - *Head Programmer*`)
     .setThumbnail(message.author.avatarURL({ dynamic: true }))
     .setTimestamp()
     .setFooter(client.config.copyright)
